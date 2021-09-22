@@ -1,0 +1,36 @@
+{
+  "name": "vetclinic",
+  "version": "1.0.0",
+  "description": "App para clinica veterinaria",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/slumsk8/vetclinic.git"
+  },
+  "keywords": [
+    "vet",
+    "veterinario",
+    "veterinaria",
+    "clinica"
+  ],
+  "author": "Tiago Aragao Costa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slumsk8/vetclinic/issues"
+  },
+  "homepage": "https://github.com/slumsk8/vetclinic#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "sequelize": "^6.6.5",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "sequelize-cli": "^6.2.0"
+  }
+}
