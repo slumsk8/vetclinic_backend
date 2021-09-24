@@ -2,16 +2,16 @@
 Projeto backend da aplicação consultório veterinário
 
 * Cadastros 
-  * tutores 
-  * pets
-  * médicos
-  * consultas
+  * tutores v
+  * pets v
+  * médicos v
+  * consultas v
   * medicamentos
   * prontuário do pet
 
 * Consultas 
-  * médico
-  * tutor 
-  * pet
+  * médico v
+  * tutor v
+  * pet v
 
 Em construção...
