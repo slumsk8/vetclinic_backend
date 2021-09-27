@@ -1,5 +1,7 @@
 const Tutor = require('../models/Tutor');
 const Pet = require('../models/Pet');
+const sequelize = require('sequelize');
+const { findAll } = require('../models/Tutor');
 
 module.exports = {
     async createPet(req, res) {
@@ -22,12 +24,25 @@ module.exports = {
         return res.json(pet);
     },
 
+    async findAll(req, res){
+        const pets = await Pet.findAll({
+            order: [                
+                ['name', 'ASC'],
+            ]
+        });
+
+        return res.json(pets);
+    },
+
     async findAllPets(req, res) {
         const { id_tutor } = req.params; //busco o id do tutor
 
         //faço a busca pelo tutor e associo aos pets pertecentes a ele
-        const tutor = await Tutor.findByPk(id_tutor, {
-            include: { association: 'pets' }
+        const tutor = await Pet.findAll({
+            order: [
+                ['name', 'ASC']
+            ],
+            include: { association: 'tutor' },                  
         });
 
         return res.json(tutor);
