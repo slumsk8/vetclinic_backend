@@ -20,8 +20,9 @@ route.delete('/doctor/:id', DoctorController.deletDoctor);
 
 //pet
 route.post('/tutor/:id_tutor/pet', PetController.createPet);
-route.get('/tutor/:id_tutor/pets', PetController.findAllPets);
+// route.get('/tutor/:id_tutor/pets', PetController.findAllPets);
 route.get('/pet/:id', PetController.findPetById);
+route.get('/pets', PetController.findAllPets);
 route.delete('/pet/:id', PetController.deletPet);
 
 //veterinay consultation
